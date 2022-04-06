@@ -1,0 +1,61 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package complexno;
+import java.awt.PageAttributes;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author sjcet
+ */
+public class Complexno {
+
+    int rl,img;
+    
+    Complexno(int a,int b)
+    {
+      rl=a;
+      img=b;
+    }
+    public Complexno add(Complexno c1,Complexno c2)
+    {
+        Complexno c=new Complexno(0,0);
+        c.rl=c1.rl+c2.rl;
+        c.img=c1.img+c2.img;
+        return c;
+    }
+    
+    
+    public static void main(String[] args) {
+       int rl1,rl2,img1,img2;
+       Scanner sn=new Scanner(System.in);
+        System.out.println("enter the first numbers real part");
+        rl1=sn.nextInt();
+        System.out.println("enter the first numbers imaginary  part");
+        img1=sn.nextInt();
+        System.out.println("enter the second numbers real part");
+        rl2=sn.nextInt();
+        System.out.println("enter the firs numbers imaginary part");
+        img2=sn.nextInt();
+        
+        Complexno c1=new Complexno(rl1,img1);
+        Complexno c2=new Complexno(rl2,img2);
+        Complexno c3=new Complexno(0,0);
+
+         c3=c3.add(c1,c2);
+         
+         System.out.println("the first complex no is"+rl1+"+i"+img1);
+         System.out.println("the first complex no is"+rl2+"+i"+img2);
+         
+         
+         System.out.println("the sum of  complex no is"+c3.rl+"+i"+c3.img);
+         
+        
+        
+    }
+    
+}
